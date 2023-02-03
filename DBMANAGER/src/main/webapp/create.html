@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CREATE</title>
+<link href="create.css" rel="stylesheet">
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Noto+Serif:ital,wght@1,400;1,700&family=Oswald:wght@700&family=Rubik+Bubbles&family=Rubik+Marker+Hatch&family=Stylish&display=swap" rel="stylesheet">
+
+  <link href="style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Combo&family=Island+Moments&family=Lora&family=PT+Sans:ital@1&family=Roboto:ital,wght@1,700&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+</head>
+<body id="createbody">
+    <div id="createheader">
+        <h1 class="apptitle">Z-----O-------   DBMANAGER   ------H-----O</h1>
+    </div>
+    <div id="parent">
+        <div id="write">
+            <form>
+            <input id="code" name="query"  type="text" placeholder="Enter Query!!!" autocomplete="off"/>
+            <button id="tick" onclick="ansShow()"><span class="material-symbols-outlined">done_outline</span></button>
+        </form>
+            <div id="suggestion">
+                <div id="head">
+                    <h1 onclick="displayChange(this)">COMMANDS</h1>
+                    <h1 onclick="displayChange(this)">DATATYPES</h1>
+                    <h1 onclick="displayChange(this)">FUNCTIONS</h1>
+                    </div>
+            <div id="commands">
+                <h2>DML</h2>
+                <button onclick="add(this)" value="INSERT">INSERT</button>
+                <button onclick="add(this)" value="UPDATE">UPDATE</button>
+                <button onclick="add(this)" value="DELETE">DELETE</button>
+                <button onclick="add(this)" value="SELECT">SELECT</button>
+                <h2>DDL</h2>
+                <button onclick="add(this)" value="CREATE">CREATE</button>
+                <button onclick="add(this)" value="DROP">DROP</button>
+                <button onclick="add(this)" value="ALTER">ALTER</button>
+                <h2>TCL</h2>
+                <button onclick="add(this)" value="TRUNCATE">TRUNCATE</button>
+                <button onclick="add(this)" value="COMMENT">COMMENT</button>
+                <button onclick="add(this)" value="COMMIT">COMMIT</button>
+                <button onclick="add(this)" value="ROLLBACK">ROLLBACK</button>
+                <button onclick="add(this)" value="SAVEPOINT">SAVEPOINT</button>
+                <h2>DCL</h2>
+                <button onclick="add(this)" value="GRANT">GRANT</button>
+                <button onclick="add(this)" value="REVOKE">REVOKE</button>
+                
+                <button onclick="clearing()" value="CLEAR">CLEAR</button> 
+            </div> 
+             <div id="datatypes">
+                <h2>String Data Types</h2>
+                <button onclick="add(this)" value="CCHAR(size)">CHAR(size)</button>
+                <button onclick="add(this)" value="VARCHAR(size)">VARCHAR(size)</button>
+                <button onclick="add(this)" value="BINARY(size)">BINARY(size)</button>
+                <button onclick="add(this)" value="VARBINARY(size)">VARBINARY(size)</button>
+                <button onclick="add(this)" value="TINYBLOB">TINYBLOB</button>
+                <button onclick="add(this)" value="TINYTEXT">TINYTEXT</button>
+                <button onclick="add(this)" value="TEXT(size)">TEXT(size)</button>
+                <button onclick="add(this)" value="BLOB(size)">BLOB(size)</button>
+                <button onclick="add(this)" value="MEDIUMTEXT">MEDIUMTEXT</button>
+                <button onclick="add(this)" value="MEDIUMBLOB">MEDIUMBLOB</button>
+                <button onclick="add(this)" value="LONGTEXT">LONGTEXT</button>
+                <button onclick="add(this)" value="LONGBLOB">LONGBLOB</button>
+                <button onclick="add(this)" value="ENUM(val1, val2, val3, ...)">ENUM(val1, val2, val3, ...)</button>
+                <button onclick="add(this)" value="SET(val1, val2, val3, ...)">SET(val1, val2, val3, ...)</button>   
+                <h2>Numeric Data Types</h2>
+                <button onclick="add(this)" value="BIT(size)">BIT(size)</button> 
+                <button onclick="add(this)" value="TINYINT(size)">TINYINT(size)</button>
+                <button onclick="add(this)" value="BOOL">BOOL</button>
+                <button onclick="add(this)" value="BOOLEAN">BOOLEAN</button>
+                <button onclick="add(this)" value="SMALLINT(size)">SMALLINT(size)</button>
+                <button onclick="add(this)" value="MEDIUMINT(size)">MEDIUMINT(size)</button>
+                <button onclick="add(this)" value="INT(size)">INT(size)</button>
+                <button onclick="add(this)" value="INTEGER(size)">INTEGER(size)</button>   
+                <button onclick="add(this)" value="BIGINT(size)">BIGINT(size)</button>
+                <button onclick="add(this)" value="FLOAT(size, d)">FLOAT(size, d)</button>
+                <button onclick="add(this)" value="FLOAT(p)">FLOAT(p)</button> 
+                <button onclick="add(this)" value="DOUBLE(size, d)">DOUBLE(size, d)</button>
+                <button onclick="add(this)" value="DECIMAL(size, d)">DECIMAL(size, d)</button>
+                <button onclick="add(this)" value="DEC(size, d)">DEC(size, d)</button>
+                <h2>Date and Time Data Types</h2>
+                <button onclick="add(this)" value="DATE">DATE</button>
+                <button onclick="add(this)" value="DATETIME(fsp)">DATETIME(fsp)</button>
+                <button onclick="add(this)" value="TIMESTAMP(fsp)">TIMESTAMP(fsp)</button>
+                <button onclick="add(this)" value="TIME(fsp)">TIME(fsp)</button>
+                <button onclick="add(this)" value="YEAR">YEAR</button>
+            </div> 
+            <div id="functions">
+                <h2>String Data Types</h2>
+                <button onclick="add(this)" value="CCHAR(size)">CHAR(size)</button>
+                </div>
+ 
+            </div>
+            
+        </div>
+        <div id="output">
+            <div id="result">
+
+            </div>
+        </div>
+    </div>    
+    <form id="button" action="mainwork.html"><button id="button1">BACK</button></form>
+</body>
+<script>
+
+    function _(value){
+    return document.getElementById(value);
+}
+
+let inputvalue = _("code");
+
+function add(ele){
+   inputvalue.value=(inputvalue.value+ele.value)+" "; 
+   inputvalue.focus();   
+}
+function clearing(){
+    result.innerText="";
+}
+
+function displayChange(ele){
+    if(ele.innerText=="COMMANDS"){
+        _("commands").style.display="block";
+        _("datatypes").style.display="none";
+        _("functions").style.display="none";
+    }
+    else if(ele.innerText=="DATATYPES"){
+        _("commands").style.display="none";
+        _("datatypes").style.display="block";
+        _("functions").style.display="none";
+    }
+    else{
+        _("commands").style.display="none";
+        _("datatypes").style.display="none";
+        _("functions").style.display="block";
+    }
+}
+
+function ansShow(){
+	event.preventDefault();
+	var userquery=document.getElementById("code").value;
+    const x = new XMLHttpRequest();
+    x.onreadystatechange = function(){
+        if (x.readyState == 4){
+            if (x.status == 200){
+                var jsonobj =x.responseText;
+                console.log(jsonobj);
+                document.getElementById("code").value="";
+                document.getElementById("result").innerHTML=jsonobj;
+     }
+
+        }
+    }
+    
+
+    x.open("get","Create?query="+userquery);
+    x.send();
+}
+
+
+</script>
+</html>
